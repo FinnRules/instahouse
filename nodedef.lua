@@ -4,7 +4,7 @@ minetest.register_node("instahouse:house_small", {
 	groups = {oddly_breakable_by_hand=2},
 	description = "Small House",
 	after_place_node = func(pos)
-		smallhouse(0, 0, 0, "default:stonebrick", "default:tree", "default:cobble", "default:cobble"),
+		small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:cobble", "default:cobble"),
 	end,
 })
 
