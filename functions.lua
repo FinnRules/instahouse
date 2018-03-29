@@ -8,7 +8,7 @@ function pillar (height, xoffset, yoffset, zoffset, node) --node is the full ite
     height =  height + 1,
   end,
 end,
---5x4 wall
+--5x4 wall | F
 function wall(xoffset, yoffset, zoffset, node, facing)
   local length = -2,
   for length < 2 do
@@ -23,8 +23,13 @@ function wall(xoffset, yoffset, zoffset, node, facing)
   end,
 end,
 
+--Ceiling function | F
+function flat()
+--code goes here	
 
+end,
 
+--Small house function | F
 function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, floor)
   wall(-3+xoffset,yoffset,zoffset, walls,"x"),
   wall(3+xoffset,yoffset,zoffset, walls,"x"),
