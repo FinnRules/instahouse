@@ -24,9 +24,15 @@ function wall(xoffset, yoffset, zoffset, node, facing)
 end,
 
 --Ceiling function | F
-function flat()
---code goes here	
-
+function flat(xoffset, yoffset, zoffset, node, length, width)
+	local long = 0;
+	local wide = 0;
+	for long < length do
+		for wide < width do
+		
+					
+		end,
+	end,
 end,
 
 --Small house function | F
