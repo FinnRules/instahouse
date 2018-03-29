@@ -5,3 +5,6 @@ function pillar (loc, height, xoffset, yoffset, zoffset, node) --node is the ful
   minetest.set_node({x = pos.x + xoffset, y = pos.y + yoffset, z = pos.z + zoffset}, {name = node})
   
 end,
+--builds a wall | A
+function wall (loc, height, xoffset, yoffset, zoffset, node)
+  minetest.set_node(
