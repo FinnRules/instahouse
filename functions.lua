@@ -53,7 +53,8 @@ function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, floor)
   pillar(4, 3+xoffset, yoffset, -3+zoffset, pillars),
   pillar(4, 3+xoffset, yoffset, 3+zoffset, pillars),
 end,
-
+--[[
 --builds a wall | A
 function wall (loc, height, xoffset, yoffset, zoffset, node)
   minetest.set_node(
+]]--
