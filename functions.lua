@@ -48,7 +48,7 @@ function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, floor)
   wall(3+xoffset,yoffset,zoffset, walls,"x"),
   wall(xoffset,yoffset,3+zoffset, walls,"z"),
   wall(xoffset, yoffset,-3+zoffset, walls,"z"),
-	pillar(4, -3+xoffset, yoffset, -3+zoffset, pillars),
+  pillar(4, -3+xoffset, yoffset, -3+zoffset, pillars),
   pillar(4, -3+xoffset, yoffset, 3+zoffset, pillars),
   pillar(4, 3+xoffset, yoffset, -3+zoffset, pillars),
   pillar(4, 3+xoffset, yoffset, 3+zoffset, pillars),
