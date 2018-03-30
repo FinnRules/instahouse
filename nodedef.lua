@@ -31,7 +31,27 @@ minetest.register_node("instahouse:skyscraper", {
 		minetest.log(posx)
 		small_house(0, 0, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", 1)
 		for i=1,i<6,1 do
-			small_house(0, 0+i*5, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", true)
+			small_house(0, 0+i*5, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", 0)
 		end
 	end,
 })
+
+--[[
+minetest.register_node("instahouse:mansion", {
+	tiles = {"instahouse_mansion.png"},
+	groups = {oddly_breakable_by_hand=2}, --add roof tile
+	description = "Mansion",
+	after_place_node = function(pos)
+		posx = pos.x
+		posy = pos.y
+		posz = pos.z
+		minetest.log(posx)
+		for i=1,i<6,1 do
+			local long = 0
+			local wide = 0
+			
+			small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:wood", "default:wood", 2)
+		end
+	end,
+})
+]]--
