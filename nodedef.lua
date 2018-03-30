@@ -1,7 +1,14 @@
 --new nodes go in here
 
 minetest.register_node("instahouse:house_small", {
-	tiles = {"instahouse_house_small.png"},
+	tiles = {
+		"instahouse_house_small_top.png",	
+		"instahouse_house_small.png",
+		"instahouse_house_small.png",
+		"instahouse_house_small.png",
+		"instahouse_house_small.png",
+		"instahouse_house_small_bottom.png"
+		},
 	groups = {oddly_breakable_by_hand=2}, --add roof tile
 	description = "Small House",
 	after_place_node = function(pos)
