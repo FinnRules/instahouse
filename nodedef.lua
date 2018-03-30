@@ -1,10 +1,15 @@
 --new nodes go in here
+
 minetest.register_node("instahouse:house_small", {
 	tiles = {"instahouse_house_small.png"},
 	groups = {oddly_breakable_by_hand=2},
 	description = "Small House",
-	after_place_node = func(pos)
-		small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:cobble", "default:cobble"),
+	after_place_node = function(pos)
+		posx = pos.x
+		posy = pos.y
+		posz = pos.z
+		minetest.log(posx)
+		small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:wood", "default:wood")
 	end,
 })
 
