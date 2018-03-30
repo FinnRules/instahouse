@@ -12,7 +12,7 @@ minetest.register_node("instahouse:house_small", {
 	groups = {oddly_breakable_by_hand=2}, --add roof tile
 	description = "Small House",
 	after_place_node = function(pos)
-		posx = pos.x
+		posx = pos.x --I should be crucified for my use of globals here
 		posy = pos.y
 		posz = pos.z
 		minetest.log(posx)
