@@ -2,26 +2,29 @@
 
 minetest.register_node("instahouse:house_small", {
 	tiles = {"instahouse_house_small.png"},
-	groups = {oddly_breakable_by_hand=2},
+	groups = {oddly_breakable_by_hand=2}, --add roof tile
 	description = "Small House",
 	after_place_node = function(pos)
 		posx = pos.x
 		posy = pos.y
 		posz = pos.z
 		minetest.log(posx)
-		small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:wood", "default:wood")
+		small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:wood", "default:wood", true)
 	end,
 })
 
-
---[[
-wall(-3,0,0,"default:stonebrick","x"),
-		wall(3,0,0,"default:stonebrick","x"),
-		wall(0,0,-3,"default:stonebrick","z"),
-		wall(0,0,3,"default:stonebrick","z"),
-		pillar(4, -3, yoffset, 3, "default:tree"),
-		pillar(4, 3, yoffset, 3, "default:tree"),
-		pillar(4, -3, yoffset, -3, "default:tree"),
-		pillar(4, 3, yoffset, -3, "default:tree")
-
-]]--
+minetest.register_node("instahouse:skyscraper", {
+	tiles = {"instahouse_skyscraper.png"},
+	groups = {oddly_breakable_by_hand=2}, --add roof tile
+	description = "Skyscraper",
+	after_place_node = function(pos)
+		posx = pos.x
+		posy = pos.y
+		posz = pos.z
+		minetest.log(posx)
+		small_house(0, 0, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", true)
+		for i=1,i<6,1 do
+			small_house(0, 0+i*5, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", true)
+		end
+	end,
+})
