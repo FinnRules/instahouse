@@ -44,7 +44,7 @@ function flat(xoffset, yoffset, zoffset, nodeName, length, width)
 end
 
 --Small house function | F
-function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, ground, door) --door is boolean true or false
+function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, ground, door) --door 0-2
   wall(-3+xoffset,yoffset,zoffset, walls,"x")
   wall(3+xoffset,yoffset,zoffset, walls,"x")
   wall(xoffset,yoffset,3+zoffset, walls,"z")
@@ -56,8 +56,17 @@ function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, ground, do
   flat(xoffset, yoffset+4, zoffset, roof, 7, 7)
   flat(xoffset, yoffset-1, zoffset, ground, 7, 7)
   minetest.set_node({x = posx, y = posy, z = posz}, {name = "air"})
-  if door == true then
+  if door == 1 then
   	minetest.set_node({x = posx-3, y = posy+1, z = posz}, {name = "air"})
   	minetest.set_node({x = posx-3, y = posy, z = posz}, {name = "air"})
-  end
+  elseif door == 2 then
+	minetest.set_node({x = posx-3, y = posy+1, z = posz}, {name = "air"})
+  	minetest.set_node({x = posx-3, y = posy, z = posz}, {name = "air"})
+	minetest.set_node({x = posx+3, y = posy+1, z = posz}, {name = "air"})
+  	minetest.set_node({x = posx+3, y = posy, z = posz}, {name = "air"})
+	minetest.set_node({x = posx, y = posy+1, z = posz-3}, {name = "air"})
+  	minetest.set_node({x = posx, y = posy, z = posz-3}, {name = "air"})
+	minetest.set_node({x = posx, y = posy+1, z = posz+3}, {name = "air"})
+  	minetest.set_node({x = posx, y = posy, z = posz+3}, {name = "air"})
+   end
 end
