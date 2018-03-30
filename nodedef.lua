@@ -29,7 +29,7 @@ minetest.register_node("instahouse:skyscraper", {
 		posy = pos.y
 		posz = pos.z
 		minetest.log(posx)
-		small_house(0, 0, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", true)
+		small_house(0, 0, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", 1)
 		for i=1,i<6,1 do
 			small_house(0, 0+i*5, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", true)
 		end
