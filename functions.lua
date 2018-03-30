@@ -61,8 +61,3 @@ function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, ground, do
   	minetest.set_node({x = posx-3, y = posy, z = posz}, {name = "air"})
   end
 end
---[[
---builds a wall | A
-function wall (loc, height, xoffset, yoffset, zoffset, node)
-  minetest.set_node(
-]]--
