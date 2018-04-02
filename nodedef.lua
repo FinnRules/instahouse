@@ -21,7 +21,14 @@ minetest.register_node("instahouse:house_small", {
 })
 
 minetest.register_node("instahouse:skyscraper", {
-	tiles = {"instahouse_skyscraper.png"},
+	tiles = {
+		"instahouse_skyscraper_top.png"
+		"instahouse_skyscraper.png"
+		"instahouse_skyscraper.png"
+		"instahouse_skyscraper.png"
+		"instahouse_skyscraper.png"
+		"instahouse_skyscraper_top.png"
+		},
 	groups = {oddly_breakable_by_hand=2}, --add roof tile
 	description = "Skyscraper",
 	after_place_node = function(pos)
