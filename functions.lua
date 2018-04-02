@@ -24,16 +24,20 @@ end
 
 --Ceiling function
 function flat(xoffset, yoffset, zoffset, nodeName, length, width)
+	local loffset = 0
+	local woffset = 0
 	if length % 2 == 1 then
-		length = length - 1	
+		yoffset = 1
 	end
 	if width % 2 == 1 then
-		width = width - 1	
+		woffset = 1	
 	end
+	length = length - loffset
+	width = width - woffset
 	local long = (length / 2) * -1
 	local wide = (width / 2) * -1
-	while long < (length / 2 + 1) do
-		while wide < (width / 2 + 1) do
+	while long < (length / 2 + loffset) do
+		while wide < (width / 2 + woffset) do
 			minetest.set_node({x = posx + xoffset + long, y = posy + yoffset, z = posz + zoffset + wide}, {name = nodeName})
 			wide = wide + 1
 		end
