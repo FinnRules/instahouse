@@ -1,6 +1,4 @@
---where the building functions will be stored
-
---basic pillar | F
+--basic pillar
 function pillar(height, xoffset, yoffset, zoffset, nodeName) --node is the full itemname as a string
   local tall = 0
   while tall < height do
@@ -8,7 +6,8 @@ function pillar(height, xoffset, yoffset, zoffset, nodeName) --node is the full 
     tall =  tall + 1
   end
 end
---5x4 wall | F
+
+--5x4 wall
 function wall(xoffset, yoffset, zoffset, node, facing)
   local length = -2
   while length < 3 do
@@ -23,7 +22,7 @@ function wall(xoffset, yoffset, zoffset, node, facing)
   end
 end
 
---Ceiling function | F
+--Ceiling function
 function flat(xoffset, yoffset, zoffset, nodeName, length, width)
 	if length % 2 == 1 then
 		length = length - 1	
@@ -43,7 +42,7 @@ function flat(xoffset, yoffset, zoffset, nodeName, length, width)
 	end
 end
 
---Small house function | F
+--Small house function
 function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, ground, door) --door 0-2
   wall(-3+xoffset,yoffset,zoffset, walls,"x")
   wall(3+xoffset,yoffset,zoffset, walls,"x")
