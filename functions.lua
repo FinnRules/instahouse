@@ -24,20 +24,16 @@ end
 
 --Ceiling function
 function flat(xoffset, yoffset, zoffset, nodeName, length, width)
-	local loffset = 0
-	local woffset = 0
 	if length % 2 == 1 then
-		yoffset = 1
+		length = length - 1
 	end
 	if width % 2 == 1 then
-		woffset = 1	
+		width = width - 1
 	end
-	length = length - loffset
-	width = width - woffset
 	local long = (length / 2) * -1
 	local wide = (width / 2) * -1
-	while long < (length / 2 + loffset) do
-		while wide < (width / 2 + woffset) do
+	while long < (length / 2 +1) do
+		while wide < (width / 2 +1) do
 			minetest.set_node({x = posx + xoffset + long, y = posy + yoffset, z = posz + zoffset + wide}, {name = nodeName})
 			wide = wide + 1
 		end
@@ -60,16 +56,16 @@ function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, ground, do
   flat(xoffset, yoffset-1, zoffset, ground, 7, 7)
   minetest.set_node({x = posx, y = posy, z = posz}, {name = "air"})
   if door == 1 then
-  	minetest.set_node({x = posx-3, y = posy+1, z = posz}, {name = "air"})
-  	minetest.set_node({x = posx-3, y = posy, z = posz}, {name = "air"})
+  	minetest.set_node({x = posx-3+xoffset, y = posy+1+yoffset, z = posz+zoffset}, {name = "air"})
+  	minetest.set_node({x = posx-3+xoffset, y = posy+yoffset, z = posz+zoffset}, {name = "air"})
   elseif door == 2 then
-	minetest.set_node({x = posx-3, y = posy+1, z = posz}, {name = "air"})
-  	minetest.set_node({x = posx-3, y = posy, z = posz}, {name = "air"})
-	minetest.set_node({x = posx+3, y = posy+1, z = posz}, {name = "air"})
-  	minetest.set_node({x = posx+3, y = posy, z = posz}, {name = "air"})
-	minetest.set_node({x = posx, y = posy+1, z = posz-3}, {name = "air"})
-  	minetest.set_node({x = posx, y = posy, z = posz-3}, {name = "air"})
-	minetest.set_node({x = posx, y = posy+1, z = posz+3}, {name = "air"})
-  	minetest.set_node({x = posx, y = posy, z = posz+3}, {name = "air"})
+	minetest.set_node({x = posx-3+xoffset, y = posy+1+yoffset, z = posz+zoffset}, {name = "air"})
+  	minetest.set_node({x = posx-3+xoffset, y = posy+yoffset, z = posz+zoffset}, {name = "air"})
+	minetest.set_node({x = posx+3+xoffset, y = posy+1+yoffset, z = posz+zoffset}, {name = "air"})
+  	minetest.set_node({x = posx+3+xoffset, y = posy+yoffset, z = posz+zoffset}, {name = "air"})
+	minetest.set_node({x = posx+xoffset, y = posy+1+yoffset, z = posz-3+zoffset}, {name = "air"})
+  	minetest.set_node({x = posx+xoffset, y = posy+yoffset, z = posz-3+zoffset}, {name = "air"})
+	minetest.set_node({x = posx+xoffset, y = posy+1+yoffset, z = posz+3+zoffset}, {name = "air"})
+  	minetest.set_node({x = posx+xoffset, y = posy+yoffset, z = posz+3+zoffset}, {name = "air"})
    end
 end
