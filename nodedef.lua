@@ -1,3 +1,4 @@
+--small house block
 minetest.register_node("instahouse:house_small", {
 	tiles = {
 		"instahouse_small_house_top.png",	
@@ -13,7 +14,7 @@ minetest.register_node("instahouse:house_small", {
 		posx = pos.x --I should be crucified for my use of globals here
 		posy = pos.y
 		posz = pos.z
-		small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:wood", "default:wood", 1)
+		small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:wood", "default:wood", 1)--Standard application of the funciton
 	end,
 })
 
@@ -27,22 +28,23 @@ minetest.register_node("instahouse:skyscraper", {
 		"instahouse_skyscraper_top.png"
 		},
 	groups = {oddly_breakable_by_hand=2},
-	description = "Skyscraper",
+	description = "Skyscraper [1x1x20 floors]",
 	after_place_node = function(pos)
 		posx = pos.x
 		posy = pos.y
 		posz = pos.z
 		small_house(0, 0, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", 1)
-		for i=1,20,1 do
+		for i=1,19,1 do --iterates 19 additional times for a stack of modified small houses
 			small_house(0, 0+i*5, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", 0)
 		end
 	end,
 })
 
+--mansion 5 x 5 x 3 floors high
 minetest.register_node("instahouse:mansion", {
 	tiles = {"instahouse_mansion.png"},
 	groups = {oddly_breakable_by_hand=2},
-	description = "Mansion",
+	description = "Mansion [5x5x3 Floors]",
 	after_place_node = function(pos)
 		posx = pos.x
 		posy = pos.y
@@ -65,11 +67,12 @@ minetest.register_node("instahouse:mansion", {
 
 	end,
 })
-
+-- 15 x 15 x 15 floors high
+-- strong computer fryability beward
 minetest.register_node("instahouse:super_mansion", {
 	tiles = {"instahouse_mansion.png"},
 	groups = {oddly_breakable_by_hand=2}, --add roof tile
-	description = "Super Mansion",
+	description = "Super Mansion [15^3, Beware]",
 	after_place_node = function(pos)
 		posx = pos.x
 		posy = pos.y
@@ -93,7 +96,7 @@ minetest.register_node("instahouse:super_mansion", {
 	end,
 })
 
---Gigantomite
+--Gigantomite (ore, item, ore spawn info)
 minetest.register_node("instahouse:gigantomite_ore", {
 		tiles = {"default_stone.png^instahouse_gigantomite_ore.png"},
 		description = "Gigantomite Ore",
