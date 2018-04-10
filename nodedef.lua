@@ -1,11 +1,11 @@
 minetest.register_node("instahouse:house_small", {
 	tiles = {
-		"instahouse_house_small_top.png",	
-		"instahouse_house_small.png",
-		"instahouse_house_small.png",
-		"instahouse_house_small.png",
-		"instahouse_house_small.png",
-		"instahouse_house_small_bottom.png"
+		"instahouse_small_house_top.png",	
+		"instahouse_small_house.png",
+		"instahouse_small_house.png",
+		"instahouse_small_house.png",
+		"instahouse_small_house.png",
+		"instahouse_small_house_bottom.png"
 		},
 	groups = {oddly_breakable_by_hand=2},
 	description = "Small House",
