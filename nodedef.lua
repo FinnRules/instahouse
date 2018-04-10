@@ -1,5 +1,3 @@
---new nodes go in here
-
 minetest.register_node("instahouse:house_small", {
 	tiles = {
 		"instahouse_house_small_top.png",	
@@ -9,7 +7,7 @@ minetest.register_node("instahouse:house_small", {
 		"instahouse_house_small.png",
 		"instahouse_house_small_bottom.png"
 		},
-	groups = {oddly_breakable_by_hand=2}, --add roof tile
+	groups = {oddly_breakable_by_hand=2},
 	description = "Small House",
 	after_place_node = function(pos)
 		posx = pos.x --I should be crucified for my use of globals here
@@ -28,7 +26,7 @@ minetest.register_node("instahouse:skyscraper", {
 		"instahouse_skyscraper.png",
 		"instahouse_skyscraper_top.png"
 		},
-	groups = {oddly_breakable_by_hand=2}, --add roof tile
+	groups = {oddly_breakable_by_hand=2},
 	description = "Skyscraper",
 	after_place_node = function(pos)
 		posx = pos.x
@@ -43,7 +41,7 @@ minetest.register_node("instahouse:skyscraper", {
 
 minetest.register_node("instahouse:mansion", {
 	tiles = {"instahouse_mansion.png"},
-	groups = {oddly_breakable_by_hand=2}, --add roof tile
+	groups = {oddly_breakable_by_hand=2},
 	description = "Mansion",
 	after_place_node = function(pos)
 		posx = pos.x
