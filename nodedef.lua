@@ -93,3 +93,26 @@ minetest.register_node("instahouse:super_mansion", {
 	end,
 })
 
+--Gigantomite
+minetest.register_node("instahouse:gigantomite_ore", {
+		tiles = {"default_stone.png^instahouse_gigantomite_ore.png"},
+		description = "Gigantomite Ore",
+		groups = {cracky=3},
+		drop = "instahouse:gigantomite"
+})
+
+minetest.register_ore({
+		ore_type = "scatter",
+		ore = "instahouse:gigantomite_ore",
+		wherein = "default:stone",
+		clust_scarcity = 20 * 20 * 20,
+		clust_num_ores = 10,
+		clust_size = 13,
+		y_min = -31000,
+		y_max = -100,
+})
+
+minetest.register_craftitem("instahouse:gigantomite", {
+		description = "Gigantomite",
+		inventory_image = "instahouse_gigantomite.png"
+})
