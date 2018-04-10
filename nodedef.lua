@@ -77,7 +77,7 @@ minetest.register_node("instahouse:super_mansion", {
 		posx = pos.x
 		posy = pos.y
 		posz = pos.z
-		minetest.log("running super mansion")
+		minetest.log('Running "Super Mansion"')--useful for checking in the case of crashes
 		local addfloor = 0
 		local long = 0
 		local wide = 0
@@ -93,6 +93,7 @@ minetest.register_node("instahouse:super_mansion", {
 		long = 0
 		addfloor = addfloor + 1
 		end
+	minetest.log("Mansion sucessfully built")
 	end,
 })
 
