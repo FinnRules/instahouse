@@ -69,3 +69,9 @@ function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, ground, do
   	minetest.set_node({x = posx+xoffset, y = posy+yoffset, z = posz+3+zoffset}, {name = "air"})
    end
 end
+
+function nilAll()
+	posx = nil
+	posy = nil
+	posz = nil
+end
