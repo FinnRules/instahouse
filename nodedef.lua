@@ -11,10 +11,11 @@ minetest.register_node("instahouse:house_small", {
 	groups = {oddly_breakable_by_hand=2},
 	description = "Small House",
 	after_place_node = function(pos)
-		posx = pos.x --I should be crucified for my use of globals here
+		posx = pos.x
 		posy = pos.y
 		posz = pos.z
 		small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:wood", "default:wood", 1)--Standard application of the funciton
+		nilAll()--Sets all globals to nil to save memory
 	end,
 })
 
@@ -37,6 +38,7 @@ minetest.register_node("instahouse:skyscraper", {
 		for i=1,19,1 do --iterates 19 additional times for a stack of modified small houses
 			small_house(0, 0+i*5, 0, "default:glass", "default:steelblock", "default:steelblock", "default:steelblock", 0)
 		end
+		nilAll()
 	end,
 })
 
@@ -64,7 +66,7 @@ minetest.register_node("instahouse:mansion", {
 		long = 0
 		addfloor = addfloor + 1
 		end
-
+		nilAll()
 	end,
 })
 -- 15 x 15 x 15 floors high
@@ -93,6 +95,7 @@ minetest.register_node("instahouse:super_mansion", {
 		long = 0
 		addfloor = addfloor + 1
 		end
+		nilAll()
 	minetest.log("Mansion sucessfully built")
 	end,
 })
