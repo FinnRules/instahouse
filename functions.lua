@@ -42,7 +42,7 @@ function flat(xoffset, yoffset, zoffset, nodeName, length, width)
 	end
 end
 
---Small house function
+--Small house function (7x7x5)
 function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, ground, door) --door 0-2
   wall(-3+xoffset,yoffset,zoffset, walls,"x")
   wall(3+xoffset,yoffset,zoffset, walls,"x")
@@ -70,7 +70,7 @@ function small_house(xoffset, yoffset, zoffset, walls, pillars, roof, ground, do
    end
 end
 
-function nilAll()
+function nilAll()--function to set all globals to nil to save memory
 	posx = nil
 	posy = nil
 	posz = nil
