@@ -1,6 +1,6 @@
 --Small house crafting
 minetest.register_craft({
-		output = 'instahouse:small_house',
+		output = 'instahouse:house_small',
 		recipe = {
 				{'default:wood', 'default:wood', 'default:wood'},
 				{'default:cobble', 'instahouse:gigantomite', 'default:cobble'},
