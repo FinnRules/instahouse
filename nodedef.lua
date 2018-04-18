@@ -15,7 +15,7 @@ minetest.register_node("instahouse:house_small", {
 		posy = pos.y
 		posz = pos.z
 		small_house(0, 0, 0, "default:stonebrick", "default:tree", "default:wood", "default:wood", 1)--Standard application of the funciton
-		nilAll()--Sets all globals to nil to save memory
+		nilAll()--Sets all three globals to nil to save memory
 	end,
 })
 
