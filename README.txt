@@ -1,4 +1,4 @@
-All code work done by FinnRules, textures done by FinnRUles and RobinFox
+All code work done by FinnRules, textures done by FinnRules and RobinFox
 
 License for all included code
 -------------------------------
