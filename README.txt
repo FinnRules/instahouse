@@ -1,3 +1,16 @@
+NOTES ABOUT CODE EXECUTION:
+
+Minetest engine only runs the "init.lua" file on its own. From the init.lua file I have included code to run three other files of code. 
+
+IF YOU WANT TO READ THE CODE FROM TOP TO BOTTOM YOU HAVE TO READ IT STARTING WITH init.lua THEN READ THE CODE IT RUNS
+
+"functions.lua" and "nodedef.lua" are the only important files for this project (the third file "crafting.lua" handles something added for completeness rather than the constraints of the project)
+
+All other files are presents because it is normal and standard practice to have them in a mod
+
+-------------------------------
+
+
 All code work done by FinnRules, textures done by FinnRules and RobinFox
 
 License for all included code
